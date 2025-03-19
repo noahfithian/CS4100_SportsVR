@@ -1,4 +1,0 @@
-This is a Temp Doc
-I am meant to be deleted later
-This is just so we can create branches for the assignment due today.
-Delete me when we get files for the project in the hub
