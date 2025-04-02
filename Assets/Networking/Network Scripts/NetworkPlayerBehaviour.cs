@@ -3,21 +3,27 @@ using System.Collections.Generic;
 using UnityEngine;
 using Unity.Netcode;
 
-public class NetworkPlayer : NetworkUIBehaviour
+public class NetworkPlayerBehaviour : NetworkBehaviour
 {
     public Transform root, head, leftHand, rightHand;
 
-    // Start is called before the first frame update
-    void Start()
+    public Renderer[] meshToDisable;
+    public override void OnNetworkSpawn()
     {
-        
+        if (IsOwner)
+        {
+            foreach (var item in meshToDisable)
+            {
+                item.enabled = false;
+            }
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (IsOwner)
-        {
+        if (IsOwner) 
+        { 
             root.position = VRRigReferences.instance.root.position;
             root.rotation = VRRigReferences.instance.root.rotation;
 
