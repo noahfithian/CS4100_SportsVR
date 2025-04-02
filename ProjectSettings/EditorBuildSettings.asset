@@ -5,12 +5,21 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Extra Scenes/SampleScene.unity
     guid: 55daccc09a3b69647bbab145b54a3ab3
   - enabled: 1
     path: Assets/Scenes/Main Menu.unity
     guid: f1745b7f950d58f40a2e2d01e35393d8
+  - enabled: 1
+    path: Assets/Duck Dodgers/Duck Dodgers.unity
+    guid: 0f9e917631d681b498352cba0518b38f
+  - enabled: 1
+    path: Assets/Scenes/Sword Play.unity
+    guid: f1e4eafdf5cfef145892851620e579e6
+  - enabled: 1
+    path: Assets/Scenes/Stack Attack.unity
+    guid: c272cb13617073245b1388a43485e395
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: bfa1182bd221b4ca89619141f66f1260, type: 2}
     Unity.XR.WindowsMR.Settings: {fileID: 11400000, guid: dc5a169419fa04987b057f65238cf3ba, type: 2}
