@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: -2354286231861372187}
   - component: {fileID: 850475486591020248}
   - component: {fileID: 6734828971055750828}
+  - component: {fileID: -7546321045464232487}
   m_Layer: 0
   m_Name: Network Player
   m_TagString: Untagged
@@ -49,7 +50,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GlobalObjectIdHash: 1795419904
+  GlobalObjectIdHash: 3002183927
   InScenePlacedSourceGlobalObjectIdHash: 3002183927
   AlwaysReplicateAsRoot: 0
   SynchronizeTransform: 1
@@ -109,6 +110,18 @@ MonoBehaviour:
   InLocalSpace: 0
   Interpolate: 1
   SlerpPosition: 0
+--- !u!114 &-7546321045464232487
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 729732839298182589}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84cba17658847de4c863357541bf7ff1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1081018519356554717
 GameObject:
   m_ObjectHideFlags: 0
