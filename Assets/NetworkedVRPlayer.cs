@@ -10,19 +10,20 @@ public class NetworkedVRPlayer : NetworkBehaviour
     public Transform leftHand;
     public Transform rightHand;
 
-    private XROrigin xrOrigin;
-
     public override void OnNetworkSpawn()
     {
-        if (IsOwner) // Only the local player should control their own movement
-        {
-            xrOrigin = FindObjectOfType<XROrigin>(); // Locate XR Origin in the scene
-        }
+        DontDestroyOnLoad(gameObject);
     }
 
     private void Update()
     {
-        if (!IsOwner || xrOrigin == null) return;
+        if (!IsOwner) return;
+
+        var xrOrigin = FindObjectOfType<XROrigin>(); // Locate XR Origin in the scene
+
+        if(xrOrigin == null) {
+            Debug.Log("Failed to get the XR Origin");
+        }
 
         // Track headset movement
         head.position = xrOrigin.Camera.transform.position;
