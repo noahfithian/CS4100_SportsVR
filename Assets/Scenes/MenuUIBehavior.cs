@@ -24,12 +24,14 @@ public class MenuUIBehavior : MonoBehaviour
     public void StartHost()
     {
         NetworkManager.Singleton.StartHost();
+        //NetworkManager.Singleton.SceneManager.LoadScene(minigameScene);
         SceneManager.LoadScene(minigameScene);
     }
 
     public void StartClient()
     {
         NetworkManager.Singleton.StartClient();
+        //NetworkManager.Singleton.SceneManager.LoadScene(minigameScene);
         SceneManager.LoadScene(minigameScene);
     }
 }

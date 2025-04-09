@@ -6,9 +6,12 @@ using System.Collections.Generic;
 
 public class NetworkedVRPlayer : NetworkBehaviour
 {
-    public Transform head;
-    public Transform leftHand;
-    public Transform rightHand;
+    [SerializeField]
+    private Transform head;
+    [SerializeField]
+    private Transform leftHand;
+    [SerializeField]
+    private Transform rightHand;
 
     public override void OnNetworkSpawn()
     {
@@ -23,9 +26,11 @@ public class NetworkedVRPlayer : NetworkBehaviour
 
         if(xrOrigin == null) {
             Debug.Log("Failed to get the XR Origin");
+            return;
         }
 
         // Track headset movement
+        Debug.Log($"Head: {head.position.x}, {head.position.y}, {head.position.z}");
         head.position = xrOrigin.Camera.transform.position;
         head.rotation = xrOrigin.Camera.transform.rotation;
 
