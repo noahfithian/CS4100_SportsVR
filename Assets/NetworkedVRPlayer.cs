@@ -7,15 +7,26 @@ using System.Collections.Generic;
 public class NetworkedVRPlayer : NetworkBehaviour
 {
     [SerializeField]
+    private Transform root;
+    [SerializeField]
     private Transform head;
     [SerializeField]
     private Transform leftHand;
     [SerializeField]
     private Transform rightHand;
 
+    [SerializeField]
+    private Renderer[] meshesToDisable;
+
     public override void OnNetworkSpawn()
     {
+        // Disable meshes that shouldn't be seen in first-person
         DontDestroyOnLoad(gameObject);
+        if(IsOwner) {
+            foreach(var item in meshesToDisable) {
+                item.enabled = false;
+            }
+        }
     }
 
     private void Update()
@@ -29,8 +40,11 @@ public class NetworkedVRPlayer : NetworkBehaviour
             return;
         }
 
+        // Make sure root position is synced (just in case)
+        root.position = xrOrigin.transform.position;
+        root.rotation = xrOrigin.transform.rotation;
+
         // Track headset movement
-        Debug.Log($"Head: {head.position.x}, {head.position.y}, {head.position.z}");
         head.position = xrOrigin.Camera.transform.position;
         head.rotation = xrOrigin.Camera.transform.rotation;
 
