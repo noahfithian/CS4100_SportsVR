@@ -14,6 +14,14 @@ public class SceneChanger : NetworkBehaviour
 
     public void ChangeScene()
     {
+        Debug.Log("I set the scene to " + _sceneName);
         NetworkManager.Singleton.SceneManager.LoadScene(_sceneName, LoadSceneMode.Single);
+    }
+
+    public void ReturnToMainMenu()
+    {
+        Debug.Log("I'm loading the Main");
+        NetworkManager.Singleton.Shutdown();
+        SceneManager.LoadScene("Main Menu", LoadSceneMode.Single);
     }
 }

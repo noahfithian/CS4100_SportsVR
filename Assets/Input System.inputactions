@@ -1,0 +1,34 @@
+{
+    "name": "Input System",
+    "maps": [
+        {
+            "name": "Menuing",
+            "id": "5ceee739-fc45-4ef1-9c77-c6137666cf92",
+            "actions": [
+                {
+                    "name": "Open Menu",
+                    "type": "Button",
+                    "id": "ecb7edfb-6520-44f8-a2ff-8dcefc12f512",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "1595a6e6-53e8-41f0-8391-cd139de7c24d",
+                    "path": "<XRController>{LeftHand}/{PrimaryButton}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Open Menu",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
