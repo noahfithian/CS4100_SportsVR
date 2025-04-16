@@ -113,7 +113,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosionParticle: {fileID: 7373644630128741146, guid: 68101499d07aced4aa0ded4acb624942, type: 3}
-  pointValue: 0
+  pointValue: 50
 --- !u!54 &5395065469244206768
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -251,4 +251,4 @@ MonoBehaviour:
   m_StartingSingleGrabTransformers: []
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
-  m_FarAttachMode: 0
+  m_FarAttachMode: 1
