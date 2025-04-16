@@ -14,6 +14,10 @@ public class NetworkedVRPlayer : NetworkBehaviour
     private Transform leftHand;
     [SerializeField]
     private Transform rightHand;
+    [SerializeField]
+    private Transform body;
+    [SerializeField]
+    private float bodyDropDistance;
 
     [SerializeField]
     private Renderer[] meshesToDisable;
@@ -47,6 +51,13 @@ public class NetworkedVRPlayer : NetworkBehaviour
         // Track headset movement
         head.position = xrOrigin.Camera.transform.position;
         head.rotation = xrOrigin.Camera.transform.rotation;
+
+        // Keep body underneath the head
+        body.position = new Vector3(
+            head.position.x,
+            head.position.y - bodyDropDistance,
+            head.position.z
+        );
 
         // Find the simulator transforms manually
         leftHand.position = xrOrigin.transform.Find("Camera Offset/Left Controller").position;
