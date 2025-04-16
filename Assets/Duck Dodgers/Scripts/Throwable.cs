@@ -43,12 +43,12 @@ public class Throwable : MonoBehaviour
         if (other.gameObject.CompareTag("Ground"))
         {
             isOnGround = true;
-            Debug.Log("Throwable is on ground.");
+            // Debug.Log("Throwable is on ground.");
         }
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (gameObject.CompareTag("Rival"))
+        if (other.CompareTag("Rival"))
         {
             Destroy(gameObject);
             Instantiate(explosionParticle, transform.position, explosionParticle.transform.rotation);
@@ -61,7 +61,7 @@ public class Throwable : MonoBehaviour
         if (other.gameObject.CompareTag("Ground"))
         {
             isOnGround = false;
-            Debug.Log("Throwable has left the ground.");
+            // Debug.Log("Throwable has left the ground.");
         }
     }
 }
