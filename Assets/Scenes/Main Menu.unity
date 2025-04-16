@@ -1197,7 +1197,7 @@ MonoBehaviour:
   NetworkConfig:
     ProtocolVersion: 0
     NetworkTransport: {fileID: 636954138}
-    PlayerPrefab: {fileID: 729732839298182589, guid: 2b28d3a761c52944fbdbab080362360a, type: 3}
+    PlayerPrefab: {fileID: 5941837271742217257, guid: c7c46fbbb19e705489d27a30bae340b5, type: 3}
     Prefabs:
       NetworkPrefabsLists:
       - {fileID: 11400000, guid: 735e3c9879def5148a3c84b5de946a79, type: 2}
@@ -3312,6 +3312,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47ea362a056b48648944f8a238098383, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  minigameScene: Duck Dodgers/Duck Dodgers
 --- !u!1 &1835663022
 GameObject:
   m_ObjectHideFlags: 0
